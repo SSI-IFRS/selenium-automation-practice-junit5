@@ -270,4 +270,7 @@ gradle-app.setting
 # Eclipse Core
 # JDT-specific (Eclipse Java Development Tools)
 
+### Report ###
+Report/*
+
 # End of https://www.toptal.com/developers/gitignore/api/java,netbeans,intellij,visualstudiocode,eclipse,maven,gradle
