@@ -3,12 +3,11 @@ package TestCases;
 import Framework.*;
 import Tasks.*;
 import com.aventstack.extentreports.Status;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 import org.openqa.selenium.WebDriver;
 
-import static Framework.Report.log;
-
-public class RealizarCompraComSucesso extends TestBase {
+public class RealizarCompraParametrizadaDataProvider extends TestBase {
 
     private WebDriver driver = this.getDriver();
 
@@ -19,21 +18,23 @@ public class RealizarCompraComSucesso extends TestBase {
     InformationTask informacoes = new InformationTask(driver);
     FinishTask finish = new FinishTask(driver);
 
-    @Test
-    public void acessarGoogle() throws InterruptedException {
+    /*public static Object[][] loginTestData(){
 
-        Thread.sleep(5000);
+        return new Object[][] {{"standard_user","secret_sauce"}};
 
-    }
+    }*/
+    /*@MethodSource("loginTestData")*/
 
-    @Test
-    public void realizarCompra(){
+
+    @ParameterizedTest
+    @MethodSource("Utils.DataClass#loginTestData")
+    public void realizarCompra(String usuario, String senha){
 
         try {
+            Report.createTest("Realizar Compra com Sucesso " , ReportType.GROUP);
+            Report.createStep("Parametrizado com DataProvider");
 
-            Report.createTest("Realizar Compra com Sucesso" , ReportType.SINGLE);
-
-            login.realizarLogin();
+            login.realizarLoginParametrizado(usuario,senha);
             produto.selecionarProduto();
             invetoryProduto.addToCart();
             cart.realizarChekout();
@@ -43,9 +44,11 @@ public class RealizarCompraComSucesso extends TestBase {
 
         }catch (Exception e){
 
-            log(Status.ERROR, e.getMessage(), Screenshot.fullPageBase64(driver));
+            Report.log(Status.ERROR, e.getMessage(), Screenshot.fullPageBase64(driver));
 
         }
 
+
     }
+
 }

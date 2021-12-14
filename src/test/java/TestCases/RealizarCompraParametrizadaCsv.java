@@ -3,12 +3,11 @@ package TestCases;
 import Framework.*;
 import Tasks.*;
 import com.aventstack.extentreports.Status;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
 import org.openqa.selenium.WebDriver;
 
-import static Framework.Report.log;
-
-public class RealizarCompraComSucesso extends TestBase {
+public class RealizarCompraParametrizadaCsv extends TestBase {
 
     private WebDriver driver = this.getDriver();
 
@@ -19,21 +18,15 @@ public class RealizarCompraComSucesso extends TestBase {
     InformationTask informacoes = new InformationTask(driver);
     FinishTask finish = new FinishTask(driver);
 
-    @Test
-    public void acessarGoogle() throws InterruptedException {
 
-        Thread.sleep(5000);
-
-    }
-
-    @Test
-    public void realizarCompra(){
+    @ParameterizedTest
+    @CsvFileSource(resources = "/Csv/login.csv", numLinesToSkip = 1)
+    public void realizarCompra(String usuario, String senha){
 
         try {
+            Report.createTest("Realizar Compra com Sucesso Parametrizado com CSV" , ReportType.SINGLE);
 
-            Report.createTest("Realizar Compra com Sucesso" , ReportType.SINGLE);
-
-            login.realizarLogin();
+            login.realizarLoginParametrizado(usuario,senha);
             produto.selecionarProduto();
             invetoryProduto.addToCart();
             cart.realizarChekout();
@@ -43,9 +36,10 @@ public class RealizarCompraComSucesso extends TestBase {
 
         }catch (Exception e){
 
-            log(Status.ERROR, e.getMessage(), Screenshot.fullPageBase64(driver));
+            Report.log(Status.ERROR, e.getMessage(), Screenshot.fullPageBase64(driver));
 
         }
 
     }
+
 }

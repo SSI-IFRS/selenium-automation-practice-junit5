@@ -23,8 +23,8 @@ public class DriverManager {
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions options = new ChromeOptions();
                 options.addArguments("--start-maximized");
-                options.addArguments("--no-sandbox");
-                options.addArguments("- disable-dev-shm-usage");
+                options.addArguments("--no-sandbox"); // Bypass OS security model
+                options.addArguments("- disable-dev-shm-usage"); // overcome limited resource problems
                 driver = new ChromeDriver(options);
                 break;
 
