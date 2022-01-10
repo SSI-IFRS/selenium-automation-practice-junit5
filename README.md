@@ -1,4 +1,4 @@
-# Aplicação de automação web com Selenium WebDriver & JUnit5 | https://img.shields.io/github/workflow/status/Jurley-Ribeiro/selenium-automation-practice-junit5/maven
+# Aplicação de automação web com Selenium WebDriver & JUnit5
 
 Este projeto tem por objetivo simular uma compra com sucesso no site "https://www.saucedemo.com/index.html"
 
