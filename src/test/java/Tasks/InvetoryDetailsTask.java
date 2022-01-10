@@ -28,7 +28,6 @@ public class InvetoryDetailsTask {
         invetoryPage.getCartButton().click();
         validaCarrinho();
 
-
     }
 
     private void validaCarrinho(){

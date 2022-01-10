@@ -40,7 +40,6 @@ public class RealizarCompraComSucesso extends TestBase {
             informacoes.preencherInformacoes();
             finish.finalizarCompra();
 
-
         }catch (Exception e){
 
             log(Status.ERROR, e.getMessage(), Screenshot.fullPageBase64(driver));

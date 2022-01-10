@@ -25,7 +25,7 @@ public class SelecionarProdutoTask {
     public void selecionarProduto(){
 
         selectProduto.getProdutoLinkImage().click();
-        //Report.log(Status.INFO, "Item selecionado com sucesso", Screenshot.capture(driver));
+        Report.log(Status.INFO, "Item selecionado com sucesso", Screenshot.capture(driver));
         validaSelecaoProduto();
 
     }

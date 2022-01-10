@@ -25,7 +25,6 @@ public class RealizarCompraParametrizadaDataProvider extends TestBase {
     }*/
     /*@MethodSource("loginTestData")*/
 
-
     @ParameterizedTest
     @MethodSource("Utils.DataClass#loginTestData")
     public void realizarCompra(String usuario, String senha){
@@ -41,13 +40,11 @@ public class RealizarCompraParametrizadaDataProvider extends TestBase {
             informacoes.preencherInformacoes();
             finish.finalizarCompra();
 
-
         }catch (Exception e){
 
             Report.log(Status.ERROR, e.getMessage(), Screenshot.fullPageBase64(driver));
 
         }
-
 
     }
 

@@ -18,7 +18,6 @@ public class RealizarCompraParametrizadaCsv extends TestBase {
     InformationTask informacoes = new InformationTask(driver);
     FinishTask finish = new FinishTask(driver);
 
-
     @ParameterizedTest
     @CsvFileSource(resources = "/Csv/login.csv", numLinesToSkip = 1)
     public void realizarCompra(String usuario, String senha){
@@ -32,7 +31,6 @@ public class RealizarCompraParametrizadaCsv extends TestBase {
             cart.realizarChekout();
             informacoes.preencherInformacoes();
             finish.finalizarCompra();
-
 
         }catch (Exception e){
 
