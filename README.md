@@ -6,13 +6,13 @@ Este projeto tem por objetivo simular uma compra com sucesso no site "https://ww
 
 Este projeto conta com as seguintes tecnologias:  
 
-- Java (Ver. xxx)
-- JUnit5 (Ver. xxx)
-- Maven  (Ver. xxx)
-- ExtentReport (Ver. xxx)
-- Java Faker (Ver. xxx)
-- WebDriveManager (Ver. xxx)
-- Intellij (Ver. xxx)
+- Java (Ver. 8)
+- JUnit5 (Ver. 5.7.2)
+- Maven  (Ver. 3.8.4)
+- ExtentReport (Ver. 5.0.8)
+- Java Faker (Ver. 1.0.2)
+- WebDriveManager (Ver. 5.0.3)
+- Intellij (Ver.  2021.3 - Linux)
 
 ## Padrões Utilizados
 
