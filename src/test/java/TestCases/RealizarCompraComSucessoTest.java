@@ -8,7 +8,7 @@ import org.openqa.selenium.WebDriver;
 
 import static Framework.Report.log;
 
-public class RealizarCompraComSucesso extends TestBase {
+class RealizarCompraComSucessoTest extends TestBase {
 
     private WebDriver driver = this.getDriver();
 
@@ -21,7 +21,7 @@ public class RealizarCompraComSucesso extends TestBase {
 
 
     @Test
-    public void realizarCompra(){
+    void realizarCompra(){
 
         try {
 
