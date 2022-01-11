@@ -41,16 +41,14 @@ public class LoginTask {
     }
 
     private void validaLogin(){
-        /* Antes de termos report, construir o fluxo sem try/cat para report,apos implementar report incluir try/cat*/
         try{
-        String label = selectProduto.getHomeLabelText().getText();
-        Assertions.assertEquals(label, "Products");
-        Report.log(Status.PASS, "Login Realizado : " + label , Screenshot.fullPageBase64(driver));
+            String label = selectProduto.getHomeLabelText().getText();
+            Assertions.assertEquals(label, "PRODUCTS");
+            Report.log(Status.PASS, "Login Realizado : " + label , Screenshot.fullPageBase64(driver));
         }catch (Exception e){
 
             Report.log(Status.FAIL,"Login Falhou", Screenshot.fullPageBase64(driver));
         }
     }
-
 
 }

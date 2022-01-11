@@ -34,7 +34,7 @@ public class InvetoryDetailsTask {
 
         try{
             String label = carrinhoPage.getPageLabel().getText();
-            Assertions.assertEquals(label, "Your Cart");
+            Assertions.assertEquals(label, "YOUR CART");
             Report.log(Status.INFO,"Pagina Carrinho Carregada", Screenshot.fullPageBase64(driver));
             /* coloquei INFO para exemplificar que tem outras opcoes */
         }catch (Exception e){

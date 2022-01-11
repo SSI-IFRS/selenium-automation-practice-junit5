@@ -16,13 +16,12 @@ public class InventoryDetailsPage {
     }
 
     public WebElement getCartButton() {
-        return wait.visibilityOfElement(By.xpath("//div[@id='shopping_cart_container']"
-                + "/a[@class='shopping_cart_link fa-layers fa-fw']"));
+        return wait.visibilityOfElement(By.id("shopping_cart_container"));
     }
 
     public WebElement getAddCartButton() {
 
-        return this.driver.findElement(By.xpath("//div[@class='inventory_details_desc_container']/button[@class='btn_primary btn_inventory']"));
+        return this.driver.findElement(By.xpath("//button[starts-with(@id, 'add-to-cart-sauce-labs')]"));
     }
 
     public WebElement getProductCarLabel() {

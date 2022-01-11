@@ -22,13 +22,13 @@ public class CartPage {
 
     public WebElement getCheckoutButton() {
 
-        return this.driver.findElement(By.xpath("//div[@class='cart_footer']/a[@class='btn_action checkout_button']"));
+        return this.driver.findElement(By.id("checkout"));
 
     }
 
     public WebElement getPageLabel() {
 
-        return wait.visibilityOfElement(By.className("subheader"));
+        return wait.visibilityOfElement(By.xpath("//div[@class='header_secondary_container']/span"));
 
     }
 

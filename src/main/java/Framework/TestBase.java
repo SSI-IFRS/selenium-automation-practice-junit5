@@ -39,7 +39,7 @@ public class TestBase extends DriverManager{
     @AfterEach
     public void tearDown(){
 
-        //Report.close();
+        Report.close();
         quitDriver();
 
     }

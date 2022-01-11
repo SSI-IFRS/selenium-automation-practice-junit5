@@ -63,7 +63,7 @@ public class InformationTask {
         try{
             wait.loadElement(cartPage.getPageLabel());
             String label = cartPage.getPageLabel().getText();
-            Assertions.assertEquals(label, "Checkout: Overview");
+            Assertions.assertEquals("CHECKOUT: OVERVIEW", label);
             Report.log(Status.INFO , "Pagina Overview Carregada", Screenshot.fullPageBase64(driver));
         }catch (Exception e){
             Report.log(Status.FAIL, "Pagina Overview não foi carregada", Screenshot.fullPageBase64(driver));

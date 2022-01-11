@@ -17,7 +17,7 @@ public class SelecionarProdutoPage {
 
     public WebElement getHomeLabelText(){
 
-        return driver.findElement(By.xpath("//div[@id='inventory_filter_container']/div[@class='product_label']"));
+        return driver.findElement(By.xpath("//*[@class='header_secondary_container']/span"));
     }
 
     public WebElement getProdutoLinkImage(){

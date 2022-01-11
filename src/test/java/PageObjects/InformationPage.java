@@ -27,13 +27,13 @@ public class InformationPage {
 
     public WebElement getContinueButton() {
 
-        return this.driver.findElement(By.xpath("//div[@class='checkout_buttons']/input[@class='btn_primary cart_button']"));
+        return this.driver.findElement(By.id("continue"));
 
     }
 
     public WebElement getFinishButton(){
 
-        return driver.findElement(By.xpath("//div[@class='cart_footer']/a[@href='./checkout-complete.html']"));
+        return driver.findElement(By.id("finish"));
     }
 
 }

@@ -38,14 +38,14 @@ public class CartTask {
 
         }catch (Exception e){
 
-            Report.log(Status.FAIL, "Produto nao foi adicionado com sucesso", Screenshot.fullPageBase64(driver));
+            Report.log(Status.FAIL, "Erro: Produto nao foi adicionado a carrinho", Screenshot.fullPageBase64(driver));
         }
     }
 
     private void validaPageInformacoes(){
 
         try{
-            Assertions.assertEquals(carrinhoPage.getPageLabel().getText(), "Checkout: Your Information");
+            Assertions.assertEquals(carrinhoPage.getPageLabel().getText(), "CHECKOUT: YOUR INFORMATION");
             Report.log(Status.PASS, "Pagina Informacoes Carregada", Screenshot.fullPageBase64(driver));
 
         }catch (Exception e){
