@@ -19,12 +19,6 @@ public class RealizarCompraComSucesso extends TestBase {
     InformationTask informacoes = new InformationTask(driver);
     FinishTask finish = new FinishTask(driver);
 
-    @Test
-    public void acessarGoogle() throws InterruptedException {
-
-        Thread.sleep(5000);
-
-    }
 
     @Test
     public void realizarCompra(){

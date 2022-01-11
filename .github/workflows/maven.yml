@@ -25,5 +25,4 @@ jobs:
     - name: Build with Maven
       run: mvn package
     - name: Run Test Maven
-      run: mvn -Dtest=RealizarCompraComSucesso test
-      
+      run: mvn clean test
